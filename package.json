@@ -1,7 +1,7 @@
 {
   "name": "@wot-ui/unocss-preset",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "packageManager": "pnpm@10.25.0",
   "description": "专为 wot-ui 打造的 UnoCSS 预设，提供开箱即用的主题变量映射与原子化类名。",
   "license": "MIT",
