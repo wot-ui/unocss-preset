@@ -1,0 +1,11 @@
+.:
+  BASE_COLOR_MAP: object
+  FONT_WEIGHT_MAP: object
+  OPACITY_MAP: object
+  PADDING_MAP: object
+  presetWot: function
+  RADIUS_MAP: object
+  SEMANTIC_COLOR_MAP: object
+  SPACING_MAP: object
+  STROKE_MAP: object
+  TYPOGRAPHY_MAP: object

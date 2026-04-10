@@ -1,0 +1,16 @@
+export const SPACING_MAP: Record<string, string> = {
+  'zero': 'var(--wot-spacing-zero)',
+  'ultra-tight': 'var(--wot-spacing-ultra-tight)',
+  'super-tight': 'var(--wot-spacing-super-tight)',
+  'extra-tight': 'var(--wot-spacing-extra-tight)',
+  'tight': 'var(--wot-spacing-tight)',
+  'main': 'var(--wot-spacing-main)',
+  'loose': 'var(--wot-spacing-loose)',
+  'extra-loose': 'var(--wot-spacing-extra-loose)',
+  'super-loose': 'var(--wot-spacing-super-loose)',
+  'ultra-loose': 'var(--wot-spacing-ultra-loose)',
+  'spacious': 'var(--wot-spacing-spacious)',
+  'extra-spacious': 'var(--wot-spacing-extra-spacious)',
+  'super-spacious': 'var(--wot-spacing-super-spacious)',
+  'ultra-spacious': 'var(--wot-spacing-ultra-spacious)',
+}

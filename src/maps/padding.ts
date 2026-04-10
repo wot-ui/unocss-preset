@@ -1,0 +1,16 @@
+export const PADDING_MAP: Record<string, string> = {
+  'zero': 'var(--wot-padding-zero)',
+  'ultra-tight': 'var(--wot-padding-ultra-tight)',
+  'super-tight': 'var(--wot-padding-super-tight)',
+  'extra-tight': 'var(--wot-padding-extra-tight)',
+  'tight': 'var(--wot-padding-tight)',
+  'main': 'var(--wot-padding-main)',
+  'loose': 'var(--wot-padding-loose)',
+  'extra-loose': 'var(--wot-padding-extra-loose)',
+  'super-loose': 'var(--wot-padding-super-loose)',
+  'ultra-loose': 'var(--wot-padding-ultra-loose)',
+  'spacious': 'var(--wot-padding-spacious)',
+  'extra-spacious': 'var(--wot-padding-extra-spacious)',
+  'super-spacious': 'var(--wot-padding-super-spacious)',
+  'ultra-spacious': 'var(--wot-padding-ultra-spacious)',
+}
