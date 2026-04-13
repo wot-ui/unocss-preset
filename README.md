@@ -26,26 +26,26 @@ export default defineConfig({
 
 ```ts
 presetWot({
-  prefix: 'w',
+  prefix: 'wot',
   preflight: true,
   baseTokens: false,
 })
 ```
 
-- `prefix`: 工具类前缀，默认是 `w`，例如 `w-text-primary`、`w-m-main`
+- `prefix`: 工具类前缀，默认是 `wot`，例如 `wot-text-primary`、`wot-m-main`
 - `preflight`: 是否自动注入 wot-ui CSS 变量，默认开启
 - `baseTokens`: 是否开放基础色板和原始 token 类名，默认关闭
 
 ## 提供的规则
 
-- 颜色：`w-text-primary`、`w-bg-danger-surface`、`w-border-border-main`
-- 间距：`w-m-main`、`w-gap-tight`、`w-gap-x-loose`
-- 内边距：`w-p-main`、`w-px-tight`、`w-pb-loose`
-- 圆角：`w-rounded-md`、`w-rounded-full`
-- 字重：`w-font-medium`、`w-font-semibold`
-- 排版：`w-text-body-main`、`w-text-title-large`
-- 透明度：`w-opacity-disabled`
-- 描边：`w-border-stroke-main`
+- 颜色：`wot-text-primary`、`wot-bg-danger-surface`、`wot-border-border-main`
+- 间距：`wot-m-main`、`wot-gap-tight`、`wot-gap-x-loose`
+- 内边距：`wot-p-main`、`wot-px-tight`、`wot-pb-loose`
+- 圆角：`wot-rounded-md`、`wot-rounded-full`
+- 字重：`wot-font-medium`、`wot-font-semibold`
+- 排版：`wot-text-body-main`、`wot-text-title-large`
+- 透明度：`wot-opacity-disabled`
+- 描边：`wot-border-stroke-main`
 
 ## 导出内容
 
@@ -68,8 +68,6 @@ pnpm build
 pnpm test
 pnpm typecheck
 ```
-
-本仓库继续使用当前项目的 `tsdown` 打包和 `vitest` 测试技术栈，没有引入参考仓库的构建配置。
 
 ## License
 
