@@ -6,6 +6,7 @@ export function createFontWeightRules(prefix: string): Rule[] {
   const keys = Object.keys(FONT_WEIGHT_MAP)
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
+  const autocompleteKeys = Object.keys(FONT_WEIGHT_MAP).join('|')
 
   return [
     [
@@ -17,6 +18,7 @@ export function createFontWeightRules(prefix: string): Rule[] {
           return
         return { 'font-weight': value }
       },
+      { autocomplete: `${p}font-(${autocompleteKeys})` },
     ],
   ]
 }

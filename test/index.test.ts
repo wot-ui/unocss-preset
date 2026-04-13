@@ -14,8 +14,8 @@ describe('presetWot', () => {
     expect(preset.name).toBe('@wot-ui/unocss-preset')
     expect(preset.rules).toHaveLength(8)
     expect(preset.preflights).toHaveLength(3)
-    expect(theme.colors?.['w-primary']).toBe('var(--wot-primary-6)')
-    expect(theme.colors?.['w-base-black']).toBeUndefined()
+    expect(theme.colors?.['wot-primary']).toBe('var(--wot-primary-6)')
+    expect(theme.colors?.['wot-base-black']).toBeUndefined()
   })
 
   it('supports disabling preflights and base tokens', () => {
@@ -23,7 +23,15 @@ describe('presetWot', () => {
     const theme = preset.theme as { colors?: Record<string, string> }
 
     expect(preset.preflights).toEqual([])
-    expect(theme.colors?.['w-base-black']).toBe('var(--wot-base-black)')
+    expect(theme.colors?.['wot-base-black']).toBe('var(--wot-base-black)')
+  })
+
+  it('supports custom utility prefix', () => {
+    const preset = presetWot({ prefix: 'w' })
+    const theme = preset.theme as { colors?: Record<string, string> }
+
+    expect(theme.colors?.['w-primary']).toBe('var(--wot-primary-6)')
+    expect(theme.colors?.['wot-primary']).toBeUndefined()
   })
 
   it('supports removing the utility prefix', () => {

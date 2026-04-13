@@ -55,6 +55,7 @@ catalogs:
     # eslint-disable-next-line pnpm/yaml-no-duplicate-catalog-item
     vite: 5.2.8
   testing:
+    '@vitest/coverage-v8': 4.0.15
     tinyexec: ^1.0.2
     vitest: ^4.0.15
     vitest-package-exports: ^0.1.1

@@ -6,6 +6,7 @@ export function createTypographyRules(prefix: string): Rule[] {
   const keys = Object.keys(TYPOGRAPHY_MAP)
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
+  const autocompleteKeys = Object.keys(TYPOGRAPHY_MAP).join('|')
 
   return [
     [
@@ -20,6 +21,7 @@ export function createTypographyRules(prefix: string): Rule[] {
           'line-height': typography.lineHeight,
         }
       },
+      { autocomplete: `${p}text-(${autocompleteKeys})` },
     ],
   ]
 }

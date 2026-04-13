@@ -5,7 +5,7 @@ import { createRules } from './rules'
 import { createTheme } from './theme'
 
 export function presetWot(options: PresetWotOptions = {}): Preset {
-  const { prefix = 'w', preflight = true, baseTokens = false } = options
+  const { prefix = 'wot', preflight = true, baseTokens = false } = options
 
   return {
     name: '@wot-ui/unocss-preset',

@@ -6,6 +6,7 @@ export function createOpacityRules(prefix: string): Rule[] {
   const keys = Object.keys(OPACITY_MAP)
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
+  const autocompleteKeys = Object.keys(OPACITY_MAP).join('|')
 
   return [
     [
@@ -17,6 +18,7 @@ export function createOpacityRules(prefix: string): Rule[] {
           return
         return { opacity: value }
       },
+      { autocomplete: `${p}opacity-(${autocompleteKeys})` },
     ],
   ]
 }

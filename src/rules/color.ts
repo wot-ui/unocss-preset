@@ -16,6 +16,7 @@ export function createColorRules(prefix: string, baseTokens: boolean): Rule[] {
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
   const utilityPrefixes = Object.keys(COLOR_UTILITY_MAP).join('|')
+  const autocompleteKeys = Object.keys(colorMap).join('|')
 
   return [
     [
@@ -29,6 +30,7 @@ export function createColorRules(prefix: string, baseTokens: boolean): Rule[] {
           return
         return { [cssProperty]: value }
       },
+      { autocomplete: `${p}(${utilityPrefixes})-(${autocompleteKeys})` },
     ],
   ]
 }

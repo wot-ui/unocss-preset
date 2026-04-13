@@ -6,6 +6,7 @@ export function createRadiusRules(prefix: string): Rule[] {
   const keys = Object.keys(RADIUS_MAP)
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
+  const autocompleteKeys = Object.keys(RADIUS_MAP).join('|')
 
   return [
     [
@@ -17,6 +18,7 @@ export function createRadiusRules(prefix: string): Rule[] {
           return
         return { 'border-radius': value }
       },
+      { autocomplete: `${p}rounded-(${autocompleteKeys})` },
     ],
   ]
 }

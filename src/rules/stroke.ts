@@ -6,6 +6,7 @@ export function createStrokeRules(prefix: string): Rule[] {
   const keys = Object.keys(STROKE_MAP)
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
+  const autocompleteKeys = Object.keys(STROKE_MAP).join('|')
 
   return [
     [
@@ -17,6 +18,7 @@ export function createStrokeRules(prefix: string): Rule[] {
           return
         return { 'border-width': value }
       },
+      { autocomplete: `${p}border-stroke-(${autocompleteKeys})` },
     ],
   ]
 }

@@ -17,6 +17,8 @@ export function createPaddingRules(prefix: string): Rule[] {
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
   const utilities = Object.keys(PADDING_PROPERTY_MAP).join('|')
+  const autocompleteKeys = Object.keys(PADDING_MAP).join('|')
+  const autocompleteUtilities = Object.keys(PADDING_PROPERTY_MAP).join('|')
 
   return [
     [
@@ -34,6 +36,7 @@ export function createPaddingRules(prefix: string): Rule[] {
         }
         return result
       },
+      { autocomplete: `${p}(${autocompleteUtilities})-(${autocompleteKeys})` },
     ],
   ]
 }

@@ -22,6 +22,8 @@ export function createSpacingRules(prefix: string): Rule[] {
   const utilities = Object.keys(MARGIN_PROPERTY_MAP)
     .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|')
+  const autocompleteKeys = Object.keys(SPACING_MAP).join('|')
+  const autocompleteUtilities = Object.keys(MARGIN_PROPERTY_MAP).join('|')
 
   return [
     [
@@ -39,6 +41,7 @@ export function createSpacingRules(prefix: string): Rule[] {
         }
         return result
       },
+      { autocomplete: `${p}(${autocompleteUtilities})-(${autocompleteKeys})` },
     ],
   ]
 }
