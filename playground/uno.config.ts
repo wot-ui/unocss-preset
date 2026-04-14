@@ -1,5 +1,5 @@
+import { presetWot } from '@wot-ui/unocss-preset'
 import { defineConfig } from 'unocss'
-import { presetWot } from '../src'
 
 export default defineConfig({
   presets: [presetWot()],

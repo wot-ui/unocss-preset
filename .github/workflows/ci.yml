@@ -50,6 +50,7 @@ jobs:
 
       - run: pnpm i -g @antfu/ni
       - run: nci
+      - run: nr build
       - run: nr typecheck:playground
       - run: nr build:playground
 
