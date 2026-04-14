@@ -44,7 +44,7 @@ describe('rules mapping', () => {
     expect(getRule('wot', false, 'wot-text-body-main')[1](getRule('wot', false, 'wot-text-body-main')[2]))
       .toEqual({
         'font-size': 'var(--wot-typography-body-size-main)',
-        'line-height': 'var(--wot-typography-body-line--height-size-main)',
+        'line-height': 'var(--wot-typography-body-line-height-size-main)',
       })
     expect(getRule('wot', false, 'wot-opacity-main')[1](getRule('wot', false, 'wot-opacity-main')[2]))
       .toEqual({ opacity: 'var(--wot-opacity-main)' })

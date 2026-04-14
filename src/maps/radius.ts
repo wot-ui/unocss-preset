@@ -6,5 +6,5 @@ export const RADIUS_MAP: Record<string, string> = {
   'xl': 'var(--wot-radius-extra-large)',
   '2xl': 'var(--wot-radius-super-large)',
   '3xl': 'var(--wot-radius-ultra-large)',
-  'full': 'var(--wot-radius-radius-full)',
+  'full': 'var(--wot-radius-full)',
 }

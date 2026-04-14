@@ -4,7 +4,7 @@ import {
   SEMANTIC_COLOR_MAP,
 } from './maps'
 
-export function createTheme(prefix: string, baseTokens: boolean): NonNullable<Preset['theme']> {
+export function createTheme(prefix: string, baseTokens: boolean): NonNullable<Preset['theme']> & { colors: Record<string, string> } {
   const p = prefix ? `${prefix}-` : ''
   const colorMap = baseTokens
     ? { ...SEMANTIC_COLOR_MAP, ...BASE_COLOR_MAP }

@@ -33,6 +33,8 @@
     "build:playground": "pnpm --dir playground build:h5",
     "dev": "tsdown --watch",
     "dev:playground": "pnpm --dir playground dev:h5",
+    "generate:css-vars": "tsx scripts/generate-unocss-css-vars.ts",
+    "generate:css-vars:clone": "rm -rf /tmp/wot-ui && git clone --depth 1 https://github.com/wot-ui/wot-ui.git /tmp/wot-ui && pnpm generate:css-vars -- --wot-dir /tmp/wot-ui/src/uni_modules/wot-ui/styles/theme --output ./src/generated/css-vars.ts",
     "lint": "eslint --fix",
     "prepublishOnly": "nr build",
     "release": "bumpp",
